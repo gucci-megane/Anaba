@@ -16,11 +16,11 @@ public class MyFragmentPagerAdapter extends android.support.v4.app.FragmentPager
     public Fragment getItem(int position) {
         switch(position){
             case 0:
-                return new SampleFragment();
+                return CardFragment.newInstance(position);
             case 1:
-                return new SampleFragment();
+                return CardFragment.newInstance(position);
             default:
-                return new SampleFragment();
+                return CardFragment.newInstance(position);
         }
     }
 
