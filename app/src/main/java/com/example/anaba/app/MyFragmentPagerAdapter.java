@@ -1,15 +1,14 @@
 package com.example.anaba.app;
 
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 
 /**
  * Created by gucci on 2014/11/08.
  */
-public class TestFragmentPagerAdapter extends FragmentPagerAdapter {
+public class MyFragmentPagerAdapter extends android.support.v4.app.FragmentPagerAdapter {
 
-    public TestFragmentPagerAdapter(FragmentManager fm) {
+    public MyFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -32,6 +31,13 @@ public class TestFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return "Page " + (position+1);
+        switch(position){
+            case 0:
+                return "Page " + (position+1);
+            case 1:
+                return "Page " + (position+1);
+            default:
+                return "Page " + (position+1);
+        }
     }
 }

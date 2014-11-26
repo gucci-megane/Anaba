@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:layout_gravity="center">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250sp"
+        android:src="@drawable/juice"
+        />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="ID"
+                android:textSize="20sp"
+                android:layout_marginTop="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="PASSWORD"
+                android:textSize="20sp"
+                android:layout_marginTop="30sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal">
+
+
+            <EditText
+                android:id="@+id/id_text"
+                android:layout_width="230sp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="IDを入力してください"/>
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_width="230sp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="パスワードを入力してください"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:text="ログイン"
+            />
+
+        <Button
+            android:id="@+id/regist_button"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:text="新規登録"
+            />
+
+     </LinearLayout>
+
+
+</LinearLayout>
