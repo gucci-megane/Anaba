@@ -9,17 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
 /**
  * Created by gucci on 2014/11/26.
  */
-public class CardFragment extends Fragment{
+public class CommunicationCardFragment extends Fragment{
     private static final String ARG_POSITION = "position";
 
     private int position;
 
-    public static CardFragment newInstance(int position) {
-        CardFragment f = new CardFragment();
+    public static CommunicationCardFragment newInstance(int position) {
+        CommunicationCardFragment f = new CommunicationCardFragment();
         Bundle b = new Bundle();
         b.putInt(ARG_POSITION, position);
         f.setArguments(b);
@@ -42,18 +44,21 @@ public class CardFragment extends Fragment{
 
         FrameLayout fl = new FrameLayout(getActivity());
         fl.setLayoutParams(params);
-
         final int margin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8, getResources()
                 .getDisplayMetrics());
+        params.setMargins(margin, margin, margin, margin);
+
+        LinearLayout ll = new LinearLayout(getActivity());
+        ll.setLayoutParams(params);
+        ll.setBackgroundResource(R.drawable.background_card);
+        ll.setOrientation(LinearLayout.VERTICAL);
 
         TextView v = new TextView(getActivity());
-        params.setMargins(margin, margin, margin, margin);
-        v.setLayoutParams(params);
         v.setGravity(Gravity.CENTER);
-        v.setBackgroundResource(R.drawable.background_card);
-        v.setText("CARD " + (position + 1));
+        v.setText("Communication");
+        ll.addView(v);
 
-        fl.addView(v);
+        fl.addView(ll);
         return fl;
     }
 }

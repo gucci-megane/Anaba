@@ -11,10 +11,10 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200sp"
+        android:layout_height="200dp"
         android:src="@drawable/juice"
-        android:layout_marginTop="20sp"
-        android:layout_marginBottom="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
         />
 
 
@@ -39,70 +39,51 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:text="Foursquareアカウント"
-                android:textSize="25sp"
+                android:textSize="25dp"
                 android:textColor="#fe884b"
-                android:layout_marginTop="10sp"
+                android:layout_marginTop="10dp"
                 />
 
             <EditText
                 android:id="@+id/id_text"
-                android:layout_width="300sp"
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="IDを入力してください"
+                android:hint="IDを入力してください"
                 />
 
             <EditText
                 android:id="@+id/password_text"
-                android:layout_width="300sp"
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="パスワードを入力してください"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:gravity="center_horizontal"
-        >
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center_horizontal"
-        android:background="#ecf0f1"
-        >
+                android:hint="パスワードを入力してください"/>
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="260sp"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:text="ログイン"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="#ecf0f1"
             android:background="#fe884b"
-            android:layout_marginTop="10sp"
-            android:layout_marginLeft="20sp"
-            android:layout_marginRight="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             />
 
         <Button
             android:id="@+id/regist_button"
-            android:layout_width="260sp"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
             android:text="新規登録"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="#ecf0f1"
             android:background="#fe884b"
-            android:layout_marginTop="20sp"
-            android:layout_marginLeft="20sp"
-            android:layout_marginRight="20sp"
-            android:layout_marginBottom="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
             />
 
      </LinearLayout>
