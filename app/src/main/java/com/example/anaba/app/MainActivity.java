@@ -6,8 +6,10 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.view.Window;
+import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
+import com.squareup.otto.Subscribe;
 
 public class MainActivity extends FragmentActivity {
 
@@ -28,7 +30,24 @@ public class MainActivity extends FragmentActivity {
         tabs.setViewPager(pager);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Subscriberとして登録する
+        BusHolder.get().register(this);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // Subscriberの登録を解除する
+        BusHolder.get().unregister(this);
+    }
+
+    @Subscribe
+    public void subscribe(CheckInButtonClickEvent event) {
+        Toast.makeText(this, event.message, Toast.LENGTH_LONG).show();
+    }
 }
 
 
