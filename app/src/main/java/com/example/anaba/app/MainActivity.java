@@ -48,6 +48,8 @@ public class MainActivity extends FragmentActivity {
     public void subscribe(CheckInButtonClickEvent event) {
         Toast.makeText(this, event.message, Toast.LENGTH_LONG).show();
     }
+
+
 }
 
 

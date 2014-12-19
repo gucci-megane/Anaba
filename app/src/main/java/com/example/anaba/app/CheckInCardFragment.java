@@ -74,7 +74,7 @@ public class CheckInCardFragment extends Fragment{
         listView = new ListView(getActivity());
         // Androidフレームワーク標準のレイアウト
         adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(),
-                R.layout.checkin_list_item);
+                R.layout.list_item);
         // ListViewのitemをおした時の処理
         listView.setOnItemClickListener( new AdapterView.OnItemClickListener(){
             @Override
