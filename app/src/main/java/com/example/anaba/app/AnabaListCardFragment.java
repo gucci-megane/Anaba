@@ -89,8 +89,11 @@ public class AnabaListCardFragment extends Fragment{
         spinner.setFocusable(false);
         ll.addView(spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),R.layout.anabalist_spinner_item);
+
+        adapter.add("カテゴリを選択してください");
         adapter.add("test");
         adapter.add("check");
+
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
             @Override
