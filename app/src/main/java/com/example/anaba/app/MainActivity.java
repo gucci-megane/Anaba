@@ -49,7 +49,6 @@ public class MainActivity extends FragmentActivity {
         Toast.makeText(this, event.message, Toast.LENGTH_LONG).show();
     }
 
-
 }
 
 

@@ -1,12 +1,15 @@
 package com.example.anaba.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.LinearLayout;
@@ -31,7 +34,6 @@ public class CommunicationCardFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         position = getArguments().getInt(ARG_POSITION);
     }
 
@@ -39,7 +41,6 @@ public class CommunicationCardFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //CARD内の編集はここで
-
         LayoutParams params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
 
         FrameLayout fl = new FrameLayout(getActivity());
@@ -57,6 +58,20 @@ public class CommunicationCardFragment extends Fragment{
         v.setGravity(Gravity.CENTER);
         v.setText("Communication");
         ll.addView(v);
+
+        params = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
+        Button commonBt = new Button(getActivity());
+        commonBt.setText("Bluetooth通信");
+        commonBt.setLayoutParams(params);
+        commonBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), CommunicatedStoreListActivity.class);
+                startActivity(intent);
+                Log.e("status", "COMMUNICATION");
+            }
+        });
+        ll.addView(commonBt);
 
         fl.addView(ll);
         return fl;

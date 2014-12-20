@@ -72,7 +72,7 @@ public class MyPageCardFragment extends Fragment{
         v.setGravity(Gravity.CENTER);
         v.setText("Check-In List");
         ll.addView(v);
-        
+
         //Listの初期設定
         listView = new ListView(getActivity());
         // Androidフレームワーク標準のレイアウト
