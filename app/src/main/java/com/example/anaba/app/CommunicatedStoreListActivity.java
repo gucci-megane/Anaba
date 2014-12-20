@@ -55,5 +55,4 @@ public class CommunicatedStoreListActivity extends Activity {
         });
 
     }
-
 }
